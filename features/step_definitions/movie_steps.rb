@@ -22,3 +22,9 @@ Then /^the director of "([^"]*)" should be "([^"]*)"$/ do |title, this_director|
 	movie = Movie.find_by_title(title)
 	this_director.should == movie.director
 end
+
+Given /^(?:|I )am on the details page for "([^"]*)"$/ do |movie|
+	movie_obj = Movie.find_by_title(movie)
+	movie_id = movie_obj.id
+	visit path_to("the details page for #{movie_id}")
+end
