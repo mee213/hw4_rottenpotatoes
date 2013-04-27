@@ -11,9 +11,14 @@ When /^I go to the edit page for "([^"]*)"$/ do |movie|
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
-  fill_in(field, :with => value)
+	fill_in(field, :with => value)
 end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
-  click_button(button)
+	click_button(button)
+end
+
+Then /^the director of "([^"]*)" should be "([^"]*)"$/ do |title, this_director|
+	movie = Movie.find_by_title(title)
+	this_director.should == movie.director
 end
