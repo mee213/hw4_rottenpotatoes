@@ -43,6 +43,6 @@ Then /^I should see "([^"]*)"$/ do |movie_title|
 	page.should have_content(movie_title)
 end
 
-#{}Then /^I should not see "([^"]*)"$/ do |movie_title|
-#	page.should_not have_content(movie_title)
-#end
+Then /^I should not see "([^"]*)"$/ do |movie_title|
+	page.should_not have_content(movie_title)
+end
