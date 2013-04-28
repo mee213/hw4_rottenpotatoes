@@ -7,5 +7,11 @@ describe MoviesController do
 			get :find_similar_movies, {:id => 8}
 			response.should render_template('find_similar_movies')
 		end
+
+		it 'should go to home page if no similar movies found' do
+			@fake_movie = FactoryGirl.create(:movie, :id => '9', :title => 'Movie No. 9')
+			get :find_similar_movies, {:id => 9}
+			response.should render_template('movies')
+		end
 	end
 end

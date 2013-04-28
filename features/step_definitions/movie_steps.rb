@@ -46,3 +46,7 @@ end
 Then /^I should not see "([^"]*)"$/ do |movie_title|
 	page.should_not have_content(movie_title)
 end
+
+Then /^I should be on the home page$/ do
+	visit path_to("the home page")
+end
