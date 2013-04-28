@@ -13,13 +13,14 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
-  gem 'rspec-rails'
   gem 'simplecov'
-  gem 'ZenTest'
 end
 
 group :test do
     gem 'cucumber-rails'
+    gem 'rspec-rails'
+    gem 'ZenTest'
+    gem 'factory_girl_rails'
 end
 
 group :production do

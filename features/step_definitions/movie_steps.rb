@@ -28,3 +28,7 @@ Given /^(?:|I )am on the details page for "([^"]*)"$/ do |movie|
 	movie_id = movie_obj.id
 	visit path_to("the details page for #{movie_id}")
 end
+
+When /^(?:|I )follow "([^"]*)"$/ do |link|
+  click_link(link)
+end
