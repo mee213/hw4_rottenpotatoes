@@ -13,11 +13,11 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
-  gem 'simplecov'
+  gem 'simplecov', :require => false
 end
 
 group :test do
-    gem 'cucumber-rails'
+    gem 'cucumber-rails', :require => false
     gem 'rspec-rails'
     gem 'ZenTest'
     gem 'factory_girl_rails'

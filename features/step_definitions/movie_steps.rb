@@ -48,5 +48,7 @@ Then /^I should not see "([^"]*)"$/ do |movie_title|
 end
 
 Then /^I should be on the home page$/ do
+	#current_path = URI.parse(current_url).path
+	#current_path.should == path_to("the home page")
 	visit path_to("the home page")
 end
