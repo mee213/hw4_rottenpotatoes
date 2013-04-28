@@ -38,3 +38,11 @@ Then /^I should be on the Similar Movies page for "([^"]*)"$/ do |movie_title|
 	current_path = URI.parse(current_url).path
 	current_path.should == path_to("the Similar Movies page for #{movie_id}")
 end
+
+Then /^I should see "([^"]*)"$/ do |movie_title|
+	page.should have_content(movie_title)
+end
+
+#{}Then /^I should not see "([^"]*)"$/ do |movie_title|
+#	page.should_not have_content(movie_title)
+#end
